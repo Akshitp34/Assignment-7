@@ -1,0 +1,36 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1 style="color: rgb(143, 86, 184)">MARVELLOUS TRAVELS</h1><br><br>
+</div>
+<form class="example-form">
+  <mat-form-field style="margin-left: 40%"   class="example-full-width">
+    <mat-select [(value)]="selectedCity" placeholder="Select Your Destination">
+      <mat-option *ngFor="let city of cities" [value]="city">
+        {{city}}
+      </mat-option>
+    </mat-select>  
+  </mat-form-field>
+  <br><br>
+  <mat-form-field style="margin-left: 40%"   class="example-full-width">
+    <input matInput name ="startdate" [(ngModel)] = "startdate" [matDatepicker]="picker1" placeholder="Choose Starting Date">
+    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+    <mat-datepicker #picker1></mat-datepicker> 
+  </mat-form-field>
+  <br><br>
+  <mat-form-field style="margin-left: 40%" class="example-full-width">
+    <input matInput name ="returndate" [(ngModel)] = "returndate" [matDatepicker]="picker2" placeholder="Choose Return Date">
+    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+    <mat-datepicker #picker2></mat-datepicker> 
+  </mat-form-field>
+  <br><br>
+  
+    <button (click) = "displayDet()" mat-raised-button color = "primary" 
+    style="color:FFF;margin-left: 40%" >Submit</button><br>
+  
+</form>
+
+<h3 style = "text-align: center" *ngIf = "buttonClicked">
+  Your Journey to {{selectedCity}} from {{startdate}} to {{returndate}} is Booked
+</h3>
+
+ 

@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1 style="color: rgb(143, 86, 184)">Please Login To Continue...</h1><br><br>
+</div>
+<form class="example-form">
+  <mat-form-field style="margin-left: 40%"   class="example-full-width">
+    <input type = "text" matInput placeholder="Username" [(ngModel)] = "username" name = "username" value="">
+    <mat-hint>Enter your username...</mat-hint>    
+  </mat-form-field>
+  <br><br>
+  <mat-form-field style="margin-left: 40%" class="example-full-width">
+    <input type="password" matInput [(ngModel)] = "password" name="password" placeholder="**********">
+    <mat-hint>Enter your Password...</mat-hint>
+  </mat-form-field>
+  <br><br>
+  
+    <button (click) = "displayDet()" mat-raised-button color = "primary" style="color:FFF;margin-left: 40%" >Submit</button><br>
+  
+</form>
+
+ 
