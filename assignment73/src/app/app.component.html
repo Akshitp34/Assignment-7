@@ -1,0 +1,47 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1 style="color: rgb(14, 186, 184)">SELL YOUR CAR!</h1><br><br>
+</div>
+<form class="example-form">
+
+    <mat-form-field style="margin-left: 40%"  class="example-full-width">
+        <input matInput placeholder="Name" value="">
+        <mat-hint>Please enter the name of your car..</mat-hint>
+      </mat-form-field>
+
+      <br><br><br>
+    <div style="margin-left: 40%">
+        <mat-radio-group name = "Car Type" class="example-radio-group" [(ngModel)]="carType">
+            <mat-radio-button value = "Sedan">Sedan  </mat-radio-button>
+            <br>
+            <mat-radio-button value= "Mini Van">Mini Van</mat-radio-button>
+            <br>
+            <mat-radio-button value= "Cooper">Cooper  </mat-radio-button>
+            <br>
+            <mat-radio-button value= "Wagon">Wagon  </mat-radio-button>
+            <br>
+          </mat-radio-group>
+          <br>
+          <div class="example-selected-value">Your Car Type: {{carType}}</div>
+          </div>
+   <br><br>
+
+   <mat-form-field style="margin-left: 40%"  class="example-full-width">
+      <input matInput placeholder="Car Number" value="">
+      <mat-hint>Please enter your car number..</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field style="margin-left: 40%"   class="example-full-width">
+        <mat-select [(value)]="carSeats" placeholder="Select number of seats">
+          <mat-option *ngFor="let num of numberofseats" [value]="num">
+            {{num}}
+          </mat-option>
+        </mat-select>  
+      </mat-form-field>
+      <br><br>
+    <button (click) = "displayDet()" mat-raised-button color = "primary" 
+    style="color:FFF;margin-left: 40%" >Submit</button><br>
+  
+</form>
+
+ 
